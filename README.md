@@ -20,3 +20,7 @@ Recommended slicer settings for these parts.
 - PLA: normal part cooling.
 - PETG: reduce part cooling to ~40-60%.
 - Bridging: ensure bridging settings are tuned so the slot cut bridges cleanly.
+
+
+
+## LOVE U HABIBI
