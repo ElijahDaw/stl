@@ -1,26 +1,39 @@
-# 3D Print Notes
+# Bambu Studio Settings (X1 Carbon, PETG – Black)
 
-Recommended slicer settings for these parts.
+Recommended starting profile settings for the split mask holder and masks, organized by the common Bambu Studio categories.
 
-## Material
-- PLA for easiest printing.
-- PETG if you want added toughness.
+## Quality
+- Layer height: 0.20 mm (use 0.16 mm if you want crisper slot edges).
+- Perimeters (walls): 4.
+- Top/Bottom: 5–6 layers (≈1.0–1.2 mm).
 
-## General Settings
-- Layer height: 0.20 mm (0.16 mm for cleaner slot/fit).
-- Perimeters (walls): 4 walls (~1.6 mm with a 0.4 mm nozzle).
-- Top/Bottom: 5-6 layers each (1.0-1.2 mm).
-- Infill: 20-30% grid or gyroid; walls carry most of the load.
+## Strength
+- Infill: 20–30% gyroid or grid (20% is usually enough; 30% for extra rigidity).
+- Material: PETG.
 
-## Part Orientation
-- Holder: print flange-down so the slot bridges and the bayonet face stays flat. No supports needed if bridging is tuned; otherwise enable supports "touching buildplate" only under the slot.
-- Masks: lay flat (plate on the bed); no supports.
+## Support
+- Supports: Off by default. If the slot needs help, enable “Touching buildplate” only.
+- Support density: 10–15% if used.
+- Support interface: Off (not needed if minimal supports).
 
-## Cooling and Bridging
-- PLA: normal part cooling.
-- PETG: reduce part cooling to ~40-60%.
-- Bridging: ensure bridging settings are tuned so the slot cut bridges cleanly.
+## Adhesion
+- Brim: 5 mm brim on the holder; no brim needed for masks.
+- Bed prep: Clean bed; a light glue stick layer helps PETG release from the plate.
 
+## Cooling
+- Part fan: 20–40%. For bridging the slot, allow a temporary bump to 40–60%.
+- Aux fan: Off.
 
+## Speed
+- Use the PETG preset speeds (avoid “Ludicrous” mode).
+- If you see stringing/blobs: lower outer wall to ~60 mm/s and travel to ~180 mm/s.
 
-## LOVE U HABIBI
+## Temperature
+- Nozzle: 245 °C (can drop to 240 °C if stringing persists).
+- Bed: 80–85 °C.
+- Dry filament if exposed (e.g., 60 °C for ~4 h).
+
+## Notes for This Part
+- Holder: Print flange-down so the slot bridges; with good bridging, supports aren’t needed.
+- Masks: Lay flat (plate on bed); no supports.
+- Fit tuning: If the slot is tight, increase `slot_gap` or reduce `stem_width` slightly. If the bayonet fit is tight, increase clearance/tolerance in the SCAD and re-export.
